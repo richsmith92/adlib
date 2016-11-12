@@ -1,0 +1,35 @@
+name:                adlib
+version:             0.1.0.0
+synopsis:            Compile and run haskell expressions on the fly.
+description:         Please see README.md
+homepage:            https://github.com/w3rs/adlib#readme
+license:             MIT
+license-file:        LICENSE
+author:              Oleksii Karakulov
+maintainer:          ankarakulov@gmail.com
+category:            Text
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+executable adlib
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  ghc-options:         -O1 -Wall -fno-warn-name-shadowing
+  build-depends:       base, classy-prelude-conduit, optparse-applicative, bytestring, text, filepath, directory, pureMD5, process, filelock
+  default-language:    Haskell2010
+  default-extensions: OverloadedStrings, LambdaCase, MultiWayIf, ScopedTypeVariables, FlexibleContexts, FlexibleInstances, RecordWildCards, ViewPatterns, TupleSections, ParallelListComp, DeriveDataTypeable, DeriveGeneric, PartialTypeSignatures, ApplicativeDo, TypeFamilies, NoMonomorphismRestriction, NoImplicitPrelude, GADTs, StandaloneDeriving, RankNTypes, ConstraintKinds
+  -- other-modules:
+
+-- test-suite tsvtool-test
+--   type:                exitcode-stdio-1.0
+--   hs-source-dirs:      test
+--   main-is:             Spec.hs
+--   build-depends:       base
+--                      , tsvtool
+--   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+--   default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/w3rs/adlib
